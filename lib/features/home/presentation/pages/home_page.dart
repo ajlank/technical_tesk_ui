@@ -2,8 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:statemanagement/features/home/data/constants/property.dart';
 import 'package:statemanagement/features/home/data/constants/property_data.dart';
 import 'package:statemanagement/features/home/presentation/getx/home_controller.dart';
+import 'package:statemanagement/features/home/presentation/widgets/property_item.dart';
 import 'package:statemanagement/features/home/presentation/widgets/propery_section.dart';
 import 'package:statemanagement/features/home/presentation/widgets/reusable_header.dart';
 import 'package:statemanagement/features/home/presentation/widgets/search_pannel.dart';
@@ -67,10 +69,29 @@ class _HomePageState extends State<HomePage> {
                               rightText: 'See more',
                             ),
                             SizedBox(height: 25),
-                             ProperySection(wid: wid, properties: properties),
-                              ReusableHeader(
-                              leftText: 'Best for yu',
-                              rightText: 'See more',
+                            ProperySection(wid: wid, properties: properties),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 6),
+                              child: ReusableHeader(
+                                leftText: 'Best for you',
+                                rightText: 'See more',
+                              ),
+                            ),
+                            SizedBox(height: 25),
+                            SingleChildScrollView(
+                              scrollDirection: Axis.vertical,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: List.generate(propertiesN.length, (i) {
+                                  var p=propertiesN[i];
+                                  return PropertyItem(
+                                    imagePath:p.imageUrl,
+                                    title: p.title,
+                                    price: p.price, 
+                                    bedrooms: p.bedRooms, 
+                                    bathrooms: p.bathRooms);
+                                },)
+                              ),
                             ),
                           ],
                         ),
