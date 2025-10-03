@@ -9,9 +9,9 @@ class HomeController extends GetxController {
 
   int get getId => _id.value;
 
-  final RxDouble _xOffset = RxDouble(0); // horizontal translation
-  final RxDouble _yOffset = RxDouble(0); // vertical translation
-  final RxDouble _scaleFactor = RxDouble(1); // scaling
+  final RxDouble _xOffset = RxDouble(0); 
+  final RxDouble _yOffset = RxDouble(0); 
+  final RxDouble _scaleFactor = RxDouble(1); 
   final RxBool _isDrawerOpen = RxBool(false);
 
  double get getXoffset=>_xOffset.value;

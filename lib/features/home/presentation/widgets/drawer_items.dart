@@ -15,7 +15,6 @@ class DrawerItems extends StatelessWidget {
       child: Center(
         child: ListView(
           shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
           children: [
             ItemWidget(icon: 'lib/assets/home.png', title: 'Home', 
              bgColor:Colors.white, onTap: () {
@@ -28,7 +27,7 @@ class DrawerItems extends StatelessWidget {
                controller.setDrawerItemId(3);
             }, id: 3,),
             const SizedBox(height: 15),
-            const Divider(color: Colors.white, thickness: 0.8, endIndent: 210),
+            const Divider(color: Colors.white, thickness: 0.5, endIndent: 230),
             const SizedBox(height: 15),
             ItemWidget(icon: 'lib/assets/book_mark.png', title: 'Bookmark',
              bgColor: Colors.white, onTap: () {
@@ -43,7 +42,7 @@ class DrawerItems extends StatelessWidget {
                controller.setDrawerItemId(6);
             }, id: 6,),
             const SizedBox(height: 15),
-            const Divider(color: Colors.white, thickness: 0.8, endIndent:210),
+            const Divider(color: Colors.white, thickness: 0.5, endIndent:230),
             const SizedBox(height: 15),
             ItemWidget(icon: 'lib/assets/settings.png', title: 'Setting', 
             bgColor: Colors.white, onTap: () {

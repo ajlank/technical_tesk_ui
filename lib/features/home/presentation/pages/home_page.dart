@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,6 +27,7 @@ class _HomePageState extends State<HomePage> {
 
     return Obx(() {
       return Scaffold(
+        backgroundColor: Colors.white,
         body: Stack(
           children: [
             DrawerItems(),

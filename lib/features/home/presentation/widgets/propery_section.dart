@@ -21,7 +21,7 @@ class ProperySection extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(15),
-                  child: Container(
+                  child: SizedBox(
                     width: wid * 0.6,
                     height: 340,
 
